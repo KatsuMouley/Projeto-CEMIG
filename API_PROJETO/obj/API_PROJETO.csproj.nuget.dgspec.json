@@ -1,37 +1,34 @@
 {
   "format": 1,
   "restore": {
-    "E:\\_MyDocuments\\codigos\\.1 Projeto CEMIG\\API_PROJETO\\API_PROJETO.csproj": {}
+    "C:\\Users\\phbah\\Desktop\\cemig\\Projeto-CEMIG\\API_PROJETO\\API_PROJETO.csproj": {}
   },
   "projects": {
-    "E:\\_MyDocuments\\codigos\\.1 Projeto CEMIG\\API_PROJETO\\API_PROJETO.csproj": {
+    "C:\\Users\\phbah\\Desktop\\cemig\\Projeto-CEMIG\\API_PROJETO\\API_PROJETO.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\_MyDocuments\\codigos\\.1 Projeto CEMIG\\API_PROJETO\\API_PROJETO.csproj",
+        "projectUniqueName": "C:\\Users\\phbah\\Desktop\\cemig\\Projeto-CEMIG\\API_PROJETO\\API_PROJETO.csproj",
         "projectName": "API_PROJETO",
-        "projectPath": "E:\\_MyDocuments\\codigos\\.1 Projeto CEMIG\\API_PROJETO\\API_PROJETO.csproj",
-        "packagesPath": "C:\\Users\\Pichau\\.nuget\\packages\\",
-        "outputPath": "E:\\_MyDocuments\\codigos\\.1 Projeto CEMIG\\API_PROJETO\\obj\\",
+        "projectPath": "C:\\Users\\phbah\\Desktop\\cemig\\Projeto-CEMIG\\API_PROJETO\\API_PROJETO.csproj",
+        "packagesPath": "C:\\Users\\phbah\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\phbah\\Desktop\\cemig\\Projeto-CEMIG\\API_PROJETO\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Pichau\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\phbah\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config"
         ],
         "originalTargetFrameworks": [
-          "net9.0"
+          "net8.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net9.0": {
-            "targetAlias": "net9.0",
+          "net8.0": {
+            "targetAlias": "net8.0",
             "projectReferences": {}
           }
         },
@@ -45,15 +42,31 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.100"
+        "SdkAnalysisLevel": "9.0.200"
       },
       "frameworks": {
-        "net9.0": {
-          "targetAlias": "net9.0",
+        "net8.0": {
+          "targetAlias": "net8.0",
           "dependencies": {
-            "Microsoft.AspNetCore.OpenApi": {
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
               "target": "Package",
-              "version": "[9.0.1, )"
+              "version": "[8.0.2, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.2, )"
+            },
+            "Pomelo.EntityFrameworkCore.MySql": {
+              "target": "Package",
+              "version": "[8.0.2, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.5.0, )"
             }
           },
           "imports": [
@@ -67,6 +80,24 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[8.0.14, 8.0.14]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Host.win-x64",
+              "version": "[8.0.14, 8.0.14]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[8.0.14, 8.0.14]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[8.0.14, 8.0.14]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -75,7 +106,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.102/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.201/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

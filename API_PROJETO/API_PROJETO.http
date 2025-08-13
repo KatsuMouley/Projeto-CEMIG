@@ -1,6 +1,38 @@
 @API_PROJETO_HostAddress = http://localhost:5015
 
-GET {{API_PROJETO_HostAddress}}/weatherforecast/
+###
+# 1. TESTE DE CRIAÇÃO (POST)
+# Endpoint para cadastrar um novo sensor.
+POST {{API_PROJETO_HostAddress}}/api/sensors
+Content-Type: application/json
+
+{
+  "voltagem": 14.5,
+  "resistenciaInterna": 0.8,
+  "temperatura": 45.2
+}
+
+###
+# 2. TESTE PARA BUSCAR TODOS OS SENSORES (GET)
+# Endpoint para ler todos os dados do banco.
+GET {{API_PROJETO_HostAddress}}/api/sensors
 Accept: application/json
 
 ###
+# 3. TESTE PARA BUSCAR UM SENSOR ESPECÍFICO (GET by ID)
+# Altere o número '1' para o ID do sensor que você quer buscar.
+GET {{API_PROJETO_HostAddress}}/api/sensors/1
+Accept: application/json
+
+###
+# 4. TESTE DE ATUALIZAÇÃO (PUT)
+# Endpoint para atualizar os dados de um sensor existente.
+# Altere o número '1' para o ID do sensor que você quer atualizar.
+PUT {{API_PROJETO_HostAddress}}/api/sensors/2
+Content-Type: application/json
+
+{
+  "voltagem": 13.1,
+  "resistenciaInterna": 0.75,
+  "temperatura": 50.0
+}
