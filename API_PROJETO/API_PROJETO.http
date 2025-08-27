@@ -1,38 +1,51 @@
-@API_PROJETO_HostAddress = http://localhost:5015
+@baseUrl = https://localhost:5001/api
 
-###
-# 1. TESTE DE CRIAÇÃO (POST)
-# Endpoint para cadastrar um novo sensor.
-POST {{API_PROJETO_HostAddress}}/api/sensors
+### Criar um Sensor
+POST {{baseUrl}}/sensors
 Content-Type: application/json
 
 {
-  "voltagem": 14.5,
-  "resistenciaInterna": 0.8,
-  "temperatura": 45.2
+  "codigoSensor": "S001",
+  "localizacao": "Laboratório",
+  "descricao": "Sensor de Temperatura"
 }
 
-###
-# 2. TESTE PARA BUSCAR TODOS OS SENSORES (GET)
-# Endpoint para ler todos os dados do banco.
-GET {{API_PROJETO_HostAddress}}/api/sensors
-Accept: application/json
-
-###
-# 3. TESTE PARA BUSCAR UM SENSOR ESPECÍFICO (GET by ID)
-# Altere o número '1' para o ID do sensor que você quer buscar.
-GET {{API_PROJETO_HostAddress}}/api/sensors/1
-Accept: application/json
-
-###
-# 4. TESTE DE ATUALIZAÇÃO (PUT)
-# Endpoint para atualizar os dados de um sensor existente.
-# Altere o número '1' para o ID do sensor que você quer atualizar.
-PUT {{API_PROJETO_HostAddress}}/api/sensors/2
+### Atualizar um Sensor
+PUT {{baseUrl}}/sensors/1
 Content-Type: application/json
 
 {
-  "voltagem": 13.1,
-  "resistenciaInterna": 0.75,
-  "temperatura": 50.0
+  "codigoSensor": "S001-UPDATED",
+  "localizacao": "Sala Principal",
+  "descricao": "Sensor de Temperatura atualizado"
 }
+
+### Deletar um Sensor
+DELETE {{baseUrl}}/sensors/1
+
+### Listar todos os Sensores
+GET {{baseUrl}}/sensors
+
+### Obter Sensor por ID
+GET {{baseUrl}}/sensors/1
+
+---
+
+### Criar uma Leitura para um Sensor existente
+POST {{baseUrl}}/leituras
+Content-Type: application/json
+
+{
+  "sensorId": 1,
+  "valor": 23.5,
+  "dataRegistro": "2025-08-27T19:30:00Z"
+}
+
+### Obter Leitura por ID
+GET {{baseUrl}}/leituras/1
+
+### Obter todas as Leituras de um Sensor
+GET {{baseUrl}}/leituras/sensor/1
+
+### Deletar uma Leitura
+DELETE {{baseUrl}}/leituras/1
