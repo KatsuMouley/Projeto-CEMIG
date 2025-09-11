@@ -1,51 +1,72 @@
-@baseUrl = https://localhost:5001/api
+@baseUrl = http://localhost:5015/api
 
-### Criar um Sensor
+### ================================================================
+### ROTEIRO DE TESTES - EXECUTE NA ORDEM PARA FUNCIONAR
+### ================================================================
+
+### ETAPA 1: Criar um novo Sensor.
+# A API vai criar este sensor e dar a ele um ID (provavelmente 1, se o banco estiver vazio).
+# @name criarSensor
 POST {{baseUrl}}/sensors
 Content-Type: application/json
 
 {
-  "codigoSensor": "S001",
-  "localizacao": "Laboratório",
-  "descricao": "Sensor de Temperatura"
+  "codigoSensor": 2025,
+  "localizacao": "Área de Testes Principal",
+  "descricao": "Sensor para teste de leituras"
 }
 
-### Atualizar um Sensor
-PUT {{baseUrl}}/sensors/1
-Content-Type: application/json
+### --- Execute a requisição acima e verifique o ID criado na resposta.
+### --- Só então, continue.
+###
 
-{
-  "codigoSensor": "S001-UPDATED",
-  "localizacao": "Sala Principal",
-  "descricao": "Sensor de Temperatura atualizado"
-}
-
-### Deletar um Sensor
-DELETE {{baseUrl}}/sensors/1
-
-### Listar todos os Sensores
-GET {{baseUrl}}/sensors
-
-### Obter Sensor por ID
-GET {{baseUrl}}/sensors/1
-
----
-
-### Criar uma Leitura para um Sensor existente
+### ETAPA 2: Criar uma Leitura para o Sensor que ACABOU de ser criado.
+# Use o ID que você recebeu na resposta da Etapa 1. Vou usar `1` como exemplo.
+# @name criarLeitura
 POST {{baseUrl}}/leituras
 Content-Type: application/json
 
 {
-  "sensorId": 1,
-  "valor": 23.5,
-  "dataRegistro": "2025-08-27T19:30:00Z"
+  "sensorId": 7,
+  "voltagem": 12.5,
+  "resistenciaInterna": 0.015,
+  "temperatura": 35.2,
+  "condutancia": 66.6,
+  "desvio": 0.05
 }
 
-### Obter Leitura por ID
-GET {{baseUrl}}/leituras/1
+### --- Execute a requisição acima antes de continuar.
+###
 
-### Obter todas as Leituras de um Sensor
-GET {{baseUrl}}/leituras/sensor/1
+### ETAPA 3: Verificar se o sensor e sua leitura foram criados corretamente.
+# Use o mesmo ID da Etapa 1.
+# @name listarSensorComLeitura
+GET {{baseUrl}}/sensors/7
 
-### Deletar uma Leitura
-DELETE {{baseUrl}}/leituras/1
+### --- Execute a requisição acima para confirmar que a leitura aparece.
+###
+
+### ETAPA 4: Atualizar o Sensor com ID 1.
+# @name atualizarSensor
+PUT {{baseUrl}}/sensors/7
+Content-Type: application/json
+
+{
+  "codigoSensor": 2026,
+  "localizacao": "Área de Testes ATUALIZADA",
+  "descricao": "Este sensor foi atualizado com sucesso."
+}
+
+### --- Execute a requisição acima.
+###
+
+### ETAPA 5: Deletar a Leitura criada (use o ID da leitura, provavelmente 1).
+# @name deletarLeitura
+DELETE {{baseUrl}}/leituras/5
+
+### --- Execute a requisição acima.
+###
+
+### ETAPA 6: Deletar o Sensor (use o ID do sensor).
+# @name deletarSensor
+DELETE {{baseUrl}}/sensors/6

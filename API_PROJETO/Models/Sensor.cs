@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace API_PROJETO.Models
 {
-    // Representa o sensor físico (hardware)
+    // ... (classe Sensor permanece a mesma)
     public class Sensor
     {
         [Key]
@@ -21,6 +21,7 @@ namespace API_PROJETO.Models
         public ICollection<LeituraSensor> Leituras { get; set; } = new List<LeituraSensor>();
     }
 
+
     // Representa cada leitura capturada pelo sensor
     public class LeituraSensor
     {
@@ -30,7 +31,9 @@ namespace API_PROJETO.Models
 
         [ForeignKey("Sensor")]
         public int SensorId { get; set; }
-        public Sensor Sensor { get; set; } = null!;
+        
+        // ALTERAÇÃO AQUI: Adicione o '?' para tornar a propriedade de navegação nula
+        public Sensor? Sensor { get; set; }
 
         public double Voltagem { get; set; }
 
