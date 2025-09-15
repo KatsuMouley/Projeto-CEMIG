@@ -1,0 +1,29 @@
+-- Cria o banco de dados se ele não existir
+CREATE DATABASE IF NOT EXISTS CEMIG_DB;
+
+-- Seleciona o banco de dados para usar
+USE CEMIG_DB;
+
+-- Tabela para armazenar as informações dos sensores
+CREATE TABLE Sensors (
+    Id INT PRIMARY KEY AUTO_INCREMENT,
+    CodigoSensor INT NOT NULL,
+    Localizacao VARCHAR(255),
+    Descricao TEXT,
+    UNIQUE (CodigoSensor) -- Garante que o código do sensor seja único
+);
+
+-- Tabela para armazenar cada leitura capturada pelo sensor
+CREATE TABLE Leituras (
+    Id INT PRIMARY KEY AUTO_INCREMENT,
+    SensorId INT NOT NULL,
+    Voltagem DOUBLE NOT NULL,
+    ResistenciaInterna DOUBLE NOT NULL,
+    Temperatura DOUBLE NOT NULL,
+    Condutancia DOUBLE NOT NULL,
+    Desvio DOUBLE NOT NULL,
+    Timestamp DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+
+    -- Cria a relação de chave estrangeira com a tabela de sensores
+    FOREIGN KEY (SensorId) REFERENCES Sensors(Id) ON DELETE CASCADE
+);
