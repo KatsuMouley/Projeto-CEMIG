@@ -27,7 +27,7 @@ POST {{baseUrl}}/leituras
 Content-Type: application/json
 
 {
-  "sensorId": 7,
+  "sensorId": 1,
   "voltagem": 12.5,
   "resistenciaInterna": 0.015,
   "temperatura": 35.2,
@@ -41,7 +41,7 @@ Content-Type: application/json
 ### ETAPA 3: Verificar se o sensor e sua leitura foram criados corretamente.
 # Use o mesmo ID da Etapa 1.
 # @name listarSensorComLeitura
-GET {{baseUrl}}/sensors/7
+GET {{baseUrl}}/sensors/4
 
 ### --- Execute a requisição acima para confirmar que a leitura aparece.
 ###
@@ -62,7 +62,7 @@ Content-Type: application/json
 
 ### ETAPA 5: Deletar a Leitura criada (use o ID da leitura, provavelmente 1).
 # @name deletarLeitura
-DELETE {{baseUrl}}/leituras/5
+DELETE {{baseUrl}}/leituras/1
 
 ### --- Execute a requisição acima.
 ###
