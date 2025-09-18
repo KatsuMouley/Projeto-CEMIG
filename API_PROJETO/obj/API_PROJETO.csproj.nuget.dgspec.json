@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\5480\\OneDrive\\Desktop\\CEMIG\\Projeto-CEMIG\\API_PROJETO\\API_PROJETO.csproj": {}
+    "C:\\Users\\Nanda Molinas\\cemigProjeto\\Projeto-CEMIG\\API_PROJETO\\API_PROJETO.csproj": {}
   },
   "projects": {
-    "C:\\Users\\5480\\OneDrive\\Desktop\\CEMIG\\Projeto-CEMIG\\API_PROJETO\\API_PROJETO.csproj": {
+    "C:\\Users\\Nanda Molinas\\cemigProjeto\\Projeto-CEMIG\\API_PROJETO\\API_PROJETO.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\5480\\OneDrive\\Desktop\\CEMIG\\Projeto-CEMIG\\API_PROJETO\\API_PROJETO.csproj",
+        "projectUniqueName": "C:\\Users\\Nanda Molinas\\cemigProjeto\\Projeto-CEMIG\\API_PROJETO\\API_PROJETO.csproj",
         "projectName": "API_PROJETO",
-        "projectPath": "C:\\Users\\5480\\OneDrive\\Desktop\\CEMIG\\Projeto-CEMIG\\API_PROJETO\\API_PROJETO.csproj",
-        "packagesPath": "C:\\Users\\5480\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\5480\\OneDrive\\Desktop\\CEMIG\\Projeto-CEMIG\\API_PROJETO\\obj\\",
+        "projectPath": "C:\\Users\\Nanda Molinas\\cemigProjeto\\Projeto-CEMIG\\API_PROJETO\\API_PROJETO.csproj",
+        "packagesPath": "C:\\Users\\Nanda Molinas\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Nanda Molinas\\cemigProjeto\\Projeto-CEMIG\\API_PROJETO\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\5480\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\Nanda Molinas\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"

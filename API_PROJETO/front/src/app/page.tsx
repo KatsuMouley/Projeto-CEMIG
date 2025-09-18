@@ -32,6 +32,14 @@ export default function Home() {
         >
           Cadastrar Leitura
         </Button>
+
+        <Button
+          variant="contained"
+          color="success"
+          onClick={() => router.push('/sensor/atualizarSensor')}
+        >
+          Atualizar Sensor
+        </Button>
       </Box>
     </Paper>
   );

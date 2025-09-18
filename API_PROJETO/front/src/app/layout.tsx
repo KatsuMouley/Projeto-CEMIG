@@ -13,7 +13,7 @@ export default function RootLayout({
   return (
     <html lang="pt-BR">
       <body>
-        <CssBaseline />
+        <CssBaseline />   
         
         {/* Barra de ferramentas - CEMIG */}
         <AppBar position="static" sx={{ bgcolor: "#006837" }}>
