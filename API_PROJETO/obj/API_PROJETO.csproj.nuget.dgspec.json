@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Nanda Molinas\\cemigProjeto\\Projeto-CEMIG\\API_PROJETO\\API_PROJETO.csproj": {}
+    "C:\\TESTE\\Projeto-CEMIG\\API_PROJETO\\API_PROJETO.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Nanda Molinas\\cemigProjeto\\Projeto-CEMIG\\API_PROJETO\\API_PROJETO.csproj": {
+    "C:\\TESTE\\Projeto-CEMIG\\API_PROJETO\\API_PROJETO.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Nanda Molinas\\cemigProjeto\\Projeto-CEMIG\\API_PROJETO\\API_PROJETO.csproj",
+        "projectUniqueName": "C:\\TESTE\\Projeto-CEMIG\\API_PROJETO\\API_PROJETO.csproj",
         "projectName": "API_PROJETO",
-        "projectPath": "C:\\Users\\Nanda Molinas\\cemigProjeto\\Projeto-CEMIG\\API_PROJETO\\API_PROJETO.csproj",
-        "packagesPath": "C:\\Users\\Nanda Molinas\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Nanda Molinas\\cemigProjeto\\Projeto-CEMIG\\API_PROJETO\\obj\\",
+        "projectPath": "C:\\TESTE\\Projeto-CEMIG\\API_PROJETO\\API_PROJETO.csproj",
+        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+        "outputPath": "C:\\TESTE\\Projeto-CEMIG\\API_PROJETO\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Nanda Molinas\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -83,7 +83,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.401/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.404/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

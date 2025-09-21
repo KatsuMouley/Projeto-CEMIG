@@ -1,6 +1,7 @@
 using API_PROJETO.Data;
 using API_PROJETO.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -17,6 +18,16 @@ namespace API_PROJETO.Controllers
         {
             _context = context;
         }
+
+    // 2. NOVO MÉTODO: Adicionado para listar todas as leituras
+        [HttpGet]
+        public async Task<ActionResult<IEnumerable<LeituraSensor>>> GetLeituras()
+        {
+            return await _context.Leituras.ToListAsync();
+        }
+
+
+
 
         // POST: api/leituras
         [HttpPost]
