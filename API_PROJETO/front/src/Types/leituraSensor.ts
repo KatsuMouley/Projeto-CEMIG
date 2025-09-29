@@ -1,3 +1,4 @@
+// Define a estrutura de uma única leitura
 export type LeituraSensor = {
   id: number;
   sensorId: number;
@@ -6,5 +7,5 @@ export type LeituraSensor = {
   temperatura: number;
   condutancia: number;
   desvio: number;
-  timestamp: string; // ou Date, dependendo do formato que a API retorna
+  timestamp: string;
 };

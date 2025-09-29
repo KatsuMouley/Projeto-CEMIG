@@ -1,11 +1,7 @@
 'use client';
 
-import '@fontsource/roboto/300.css';
-import '@fontsource/roboto/400.css';
-import '@fontsource/roboto/500.css';
-import '@fontsource/roboto/700.css';
-import "./globals.css";
-import { AppBar, Box, Container, CssBaseline, Toolbar, Typography, Button } from '@mui/material';
+import "./globals.css"; 
+import { AppBar, Box, CssBaseline, Toolbar, Typography, Button } from '@mui/material';
 import Link from 'next/link';
 
 export default function RootLayout({
@@ -15,45 +11,57 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR">
+      <head>
+        <title>CEMIG - Monitoramento</title>
+        <meta name="viewport" content="initial-scale=1, width=device-width" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
+        <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
+        />
+      </head>
       <body>
         <CssBaseline />
 
-        {/* Barra de ferramentas - CEMIG */}
-        <AppBar position="static" sx={{ bgcolor: "#006837" }}>
+        {/* Barra de ferramentas com tema branco */}
+        <AppBar position="static" sx={{ bgcolor: "#ffffff", color: "#212121" }} elevation={1}>
           <Toolbar sx={{ justifyContent: 'space-between' }}>
             <Typography variant="h6" component="div" sx={{ fontWeight: 500 }}>
-              CEMIG - Companhia Energética de Minas Gerais
+              CEMIG - Monitoramento de Baterias
             </Typography>
 
-            <Box sx={{ display: 'flex', gap: 2 }}>
+            <Box>
               <Button color="inherit" component={Link} href="/">
-                Voltar para Cadastro
+                Dashboard
               </Button>
-              <Button color="inherit" component={Link} href="/sensor/gerenciarSensor">
-                Gerenciar Sensores
+              {/* --- BOTÃO ADICIONADO --- */}
+              <Button 
+                color="inherit" 
+                component={Link} 
+                href="/sensor/cadastrar" 
+                sx={{ ml: 2 }}
+              >
+                Cadastrar Sensor
               </Button>
-              <Button color="inherit" component={Link} href="/leitura/gerenciarLeitura">
-                Gerenciar Leituras
-              </Button>
+               {/* --- FIM DA ADIÇÃO --- */}
             </Box>
           </Toolbar>
         </AppBar>
 
         {/* Conteúdo principal */}
-        <Box component="main"
-          sx={{ minHeight: "calc(100vh - 120px)", py: 4, bgcolor: "#f5f5f5" }}>
-          <Container>
-            {children}
-          </Container>
+        <Box component="main" sx={{ flexGrow: 1, py: 4, minHeight: 'calc(100vh - 128px)' }}>
+          {children}
         </Box>
 
-        {/* Rodapé institucional */}
+        {/* Rodapé institucional com tema branco */}
         <Box component="footer"
           sx={{
-            bgcolor: "#006837",
-            color: "#fff",
+            bgcolor: "#ffffff",
+            color: "rgba(0, 0, 0, 0.6)",
             py: 2,
-            textAlign: "center"
+            textAlign: "center",
+            borderTop: '1px solid #e0e0e0'
           }}>
           <Typography variant="body2">
             © {new Date().getFullYear()} CEMIG - Todos os direitos reservados

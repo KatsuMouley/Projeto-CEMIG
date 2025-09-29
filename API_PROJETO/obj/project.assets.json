@@ -2725,19 +2725,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\User\\.nuget\\packages\\": {}
+    "C:\\Users\\Vitor\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\TESTE\\Projeto-CEMIG\\API_PROJETO\\API_PROJETO.csproj",
+      "projectUniqueName": "E:\\_MyDocuments\\codigos\\.1 Projeto CEMIG\\Projeto-CEMIG\\API_PROJETO\\API_PROJETO.csproj",
       "projectName": "API_PROJETO",
-      "projectPath": "C:\\TESTE\\Projeto-CEMIG\\API_PROJETO\\API_PROJETO.csproj",
-      "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-      "outputPath": "C:\\TESTE\\Projeto-CEMIG\\API_PROJETO\\obj\\",
+      "projectPath": "E:\\_MyDocuments\\codigos\\.1 Projeto CEMIG\\Projeto-CEMIG\\API_PROJETO\\API_PROJETO.csproj",
+      "packagesPath": "C:\\Users\\Vitor\\.nuget\\packages\\",
+      "outputPath": "E:\\_MyDocuments\\codigos\\.1 Projeto CEMIG\\Projeto-CEMIG\\API_PROJETO\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\Vitor\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
@@ -2806,7 +2806,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.404/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.413/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
